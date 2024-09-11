@@ -2,7 +2,7 @@ public class Fibo {
     private int number;
     private int value;
 
-    public void Fibo(int number, int value) {
+    public Fibo(int number, int value) {
         this.value = value;
         this.number = number;
     }
