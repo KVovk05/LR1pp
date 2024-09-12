@@ -3,6 +3,9 @@
 import java.util.Scanner;
 
 public class Main {
+    static Fibo[] arr;
+    static int fibo;
+
 
     /**
      * Counts value of every position in Fibonacci sequence and ads it to the array of objects
@@ -10,12 +13,10 @@ public class Main {
      */
     public static void main(String[] args) {
 
-
-        Fibo[] arr;
         Scanner myObj = new Scanner(System.in);
 
         System.out.println("Which number of Fibos");
-        int fibo = myObj.nextInt();
+         fibo = myObj.nextInt();
         arr = new Fibo[fibo];
         arr[0] = new Fibo(0,0);
         arr[1] = new Fibo(1,1);
@@ -24,15 +25,24 @@ public class Main {
             int c = arr[i-1].getValue() + arr[i-2].getValue();
 
             arr[i] = new Fibo(i,c);
+        }
+    Check();
+    }
+    /**
+     * Checking numbers
+     */
+    public static void Check(){
+        for(int i = 0;i < fibo;i++) {
             double res = Math.sqrt(arr[i].getValue() + 1);
-            if((int)res == res){
-                System.out.println(i+"'s Number " +" Value: " + arr[i].getValue() + " (" + (int)res + "*" + (int)res + "-1)");
-            }
-            else{
-                System.out.println(i+"'s Number " +" Value: " + arr[i].getValue());
+            if ((int) res == res) {
+                System.out.println(i + "'s Number " + " Value: " + arr[i].getValue() + " (" + (int) res + "*" + (int) res + "-1)");
+            } else {
+                System.out.println(i + "'s Number " + " Value: " + arr[i].getValue());
             }
         }
     }
+
+
 }
 
 
