@@ -4,8 +4,13 @@ import java.util.Scanner;
 
 public class Main {
 
-
+    /**
+     * Counts value of every position in Fibonacci sequence and ads it to the array of objects
+     * @param args
+     */
     public static void main(String[] args) {
+
+
         Fibo[] arr;
         Scanner myObj = new Scanner(System.in);
 
@@ -22,6 +27,9 @@ public class Main {
             double res = Math.sqrt(arr[i].getValue() + 1);
             if((int)res == res){
                 System.out.println(i+"'s Number " +" Value: " + arr[i].getValue() + " (" + (int)res + "*" + (int)res + "-1)");
+            }
+            else{
+                System.out.println(i+"'s Number " +" Value: " + arr[i].getValue());
             }
         }
     }
